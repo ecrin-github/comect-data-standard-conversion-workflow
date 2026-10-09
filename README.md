@@ -1,2 +1,5 @@
-# comect-data-standard-conversion-workflow
-Supplementary material for CoMeCT's data standard conversion workflow deliverable
+# CoMeCT Data Standard Conversion Workflow Deliverable Supplementary Material
+git clone with `--recurse-submodules` to get input dataset used for Carrot 
+## TODO?
+- omop-on-fhir forks?
+- FHIR2ODM fork?

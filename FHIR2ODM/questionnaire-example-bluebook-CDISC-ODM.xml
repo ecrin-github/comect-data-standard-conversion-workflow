@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODM SourceSystem="FHIR2ODMConverter" ODMVersion="1.3" CreationDateTime="2026-07-28T12:00:00" FileType="Snapshot" FileOID="000-00-0000" Description="NSW Government My Personal Health Record">
+    <Study OID="S.0000">
+        <MetaDataVersion OID="MD.0000" Name="Metadataversion">
+            <FormDef OID="F.0000" Name="NSW Government My Personal Health Record" Repeating="No">
+                <ItemGroupRef ItemGroupOID="birthDetails" Mandatory="No"/>
+            </FormDef>
+            <ItemGroupDef OID="birthDetails" Name="Birth details - To be completed by health professional">
+                <Description>
+                    <TranslatedText xml:lang="en">Birth details - To be completed by health professional / / Hep B given y / n / </TranslatedText>
+                </Description>
+                <ItemRef ItemOID="nameOfChild" Mandatory="No"/>
+                <ItemRef ItemOID="sex" Mandatory="No"/>
+                <ItemRef ItemOID="birthWeight" Mandatory="No"/>
+                <ItemRef ItemOID="birthLength" Mandatory="No"/>
+                <ItemRef ItemOID="vitaminiKDose1" Mandatory="No"/>
+                <ItemRef ItemOID="vitaminiKDose2" Mandatory="No"/>
+                <ItemRef ItemOID="vitaminKgiven" Mandatory="No"/>
+                <ItemRef ItemOID="hepBgivenDate" Mandatory="No"/>
+                <ItemRef ItemOID="abnormalitiesAtBirth" Mandatory="No"/>
+            </ItemGroupDef>
+            <ItemDef OID="nameOfChild" Name="Name of child" DataType="string"/>
+            <ItemDef OID="sex" Name="Sex" DataType="text">
+                <CodeListRef CodeListOID="CL_sex"/>
+            </ItemDef>
+            <ItemDef OID="birthWeight" Name="Birth weight (kg)" DataType="decimal"/>
+            <ItemDef OID="birthLength" Name="Birth length (cm)" DataType="decimal"/>
+            <ItemDef OID="vitaminiKDose1" Name="1st dose" DataType="datetime"/>
+            <ItemDef OID="vitaminiKDose2" Name="2nd dose" DataType="datetime"/>
+            <ItemDef OID="vitaminKgiven" Name="Vitamin K given" DataType="text">
+                <CodeListRef CodeListOID="CL_vitaminKgiven"/>
+            </ItemDef>
+            <ItemDef OID="hepBgivenDate" Name="Date given" DataType="date"/>
+            <ItemDef OID="abnormalitiesAtBirth" Name="Abnormalities noted at birth" DataType="string"/>
+            <CodeList OID="CL_sex" Name="Sex">
+                <CodeListItem CodedValue="F">
+                    <Decode>
+                        <TranslatedText xml:lang="en"/>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="M">
+                    <Decode>
+                        <TranslatedText xml:lang="en"/>
+                    </Decode>
+                </CodeListItem>
+            </CodeList>
+            <CodeList OID="CL_vitaminKgiven" Name="Vitamin K given">
+                <CodeListItem CodedValue="INJECTION">
+                    <Decode>
+                        <TranslatedText xml:lang="en"/>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="INTRAVENOUS">
+                    <Decode>
+                        <TranslatedText xml:lang="en"/>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="ORAL">
+                    <Decode>
+                        <TranslatedText xml:lang="en"/>
+                    </Decode>
+                </CodeListItem>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>
